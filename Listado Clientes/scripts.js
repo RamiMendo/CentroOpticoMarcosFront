@@ -16,29 +16,35 @@ const cliente =[
     }
 ]
 
-fetch('http://localhost:8080/clientes',{
-    'mode': 'cors',
-    'headers': {
-        'Access-Control-Allow-Origin': '*',
-    }
-})
-// .then(res =>{
-//     if(res.ok){
-//         console.log('OK')
-//         return res.json()
-//     }else{
-//         console.log()
-//         // throw Error('Error');
-//         return Promise.reject('Error');
-//     }
-// })
-.then(res => res.json())
-.then(clientes => {
-    console.log('clientes', clientes);
-})
-.catch(error => {
-    console.error(error);
-});
+function pideClientes(){
+    request('get', '/clientes', muestraClientes, handleError);
+}
+
+function request(metodo, url, handleError, handleOk){
+    const baseURL ='http://localhost:8080/';
+    const xhr = new XMLHttpRequest();
+
+    xhr.open(metodo, `${baseURL}${url}`);
+    
+    xhr.responseType ='json';
+    xhr.setRequestHeader('content-type', 'application/json');
+
+    xhr.addEventListener('error', handleError);
+
+    xhr.addEventListener('load', e=>{
+        if(xhr.status >= 200 && e.target.status <= 299){
+            handleOk(xhr.response);
+        }else{
+            handleError();
+        }
+    });
+
+    xhr.send();
+}
+
+function handleError(){
+    alert('error');
+}
 
 function modalCliente(){
 
@@ -172,7 +178,8 @@ function muestraClientes(){
 }
 
 modalCliente();
-muestraClientes();
+pideClientes();
+//muestraClientes();
 
 function handleDelete(index){
 
