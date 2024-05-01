@@ -41,76 +41,6 @@ function modalCliente(){
     botonAceptar.id="boton-modal-aceptar";
     botonAceptar.textContent="ACEPTAR";
     botonAceptar.addEventListener('click', () =>{
-        const nombre = document.getElementById('input-nombre-modal');
-        nombre.addEventListener('input', e =>{
-            //console.log('Sibling', e.target.nextSibling);
-            //console.log('Sibling', e.target.nextSibling.nextSibling);
-
-            //console.log('Parent', e.target.parentNode);
-            //console.log('Error', e.target.parentNode.querySelector('.error'));
-
-            // console.log('Parent', e.target.closest('div').querySelector('.error'));
-
-            const span = e.target.closest('div').querySelector('.error');
-            
-            if(nombre.value === ''){
-                span.style.color = 'rgb(255, 87, 87)';
-            }else{
-                span.style.color = '#3a632e';
-            }
-
-        });
-
-        const telefono = document.getElementById('input-telefono-modal');
-        telefono.addEventListener('input', e =>{
-            const span = e.target.closest('div').querySelector('.error');
-
-            if(telefono.value === ''){
-                span.style.color = 'rgb(255, 87, 87)';
-            }else{
-                span.style.color = '#3a632e';
-            }
-            
-            
-            // let mensaje = 'El telefono es obligatorio';
-
-            // if(telefono.checkVisibility()){
-            //     span.style.display = 'none';
-            // }else{
-            //     span.style.display = 'flex';
-            //     if(telefono.validity.badInput){
-            //         mensaje='Debe ingresar un numero';
-                // }else if(telefono.validity.rangeUnderflow){
-                    
-                // }else if(telefono.validity.rangeOverflow){
-
-                // }else if(telefono.validity.typeMismatch){
-                //}
-                // }else{
-                //     span.textContent = 'El telefono es obligatorio';
-                // }
-            //}
-
-            //span.textContent = mensaje;
-        });
-
-        const direccion = document.getElementById('input-direccion-modal');
-        direccion.addEventListener('input', e =>{
-
-            const span = e.target.closest('div').querySelector('.error');
-
-            if(direccion.value === ''){
-                span.style.color = 'rgb(255, 87, 87)';
-            }else{
-                span.style.color = '#3a632e';
-            }
-
-            //para campos como el email:
-
-            // const valida= regexEmail.test(email.value);
-
-        });
-
         if(config.modoCreacion){ 
             cliente.push({
                 nombre:nombre.value,
@@ -213,7 +143,7 @@ function muestraClientes(){
 
         tbody.append(fg);
     
-    table.append(tbody);
+    //table.append(tbody);
 
 }
 
