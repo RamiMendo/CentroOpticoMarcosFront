@@ -16,6 +16,30 @@ const cliente =[
     }
 ]
 
+fetch('http://localhost:8080/clientes',{
+    'mode': 'cors',
+    'headers': {
+        'Access-Control-Allow-Origin': '*',
+    }
+})
+// .then(res =>{
+//     if(res.ok){
+//         console.log('OK')
+//         return res.json()
+//     }else{
+//         console.log()
+//         // throw Error('Error');
+//         return Promise.reject('Error');
+//     }
+// })
+.then(res => res.json())
+.then(clientes => {
+    console.log('clientes', clientes);
+})
+.catch(error => {
+    console.error(error);
+});
+
 function modalCliente(){
 
     const modal = document.createElement('div');
