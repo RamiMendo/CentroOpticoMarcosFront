@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FICHA OPTICA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a role="button" id="boton-volver" href="../Listado Ficha/index.html"><img id="imagen-volver" src="images/icons8-atrás-64.png" alt="">Volver al Listado</a>
+    <h1 id="titulo-pagina">Ficha Optica</h1>
+    <hr id="linea-underline">
+    <button id="boton-imprimir"><img id="imagen-impresora" src="images/icons8-imprimir-50.png" alt=""></button>
+    <div id="container-ficha">
+        <div id="container-cabeza">
+            <h3 id="titulo-ficha">Nº 7777</h3>
+            <label for="" class="label-cabeza" id="label-fecha">Fecha Ingreso:</label>
+            <input type="date" id="input-fecha">
+            <div id="container-datos-cliente">          
+                <label for="" class="label-cabeza" id="label-nombre">Cliente:</label>
+                <select name="" id="input-nombre" class="input-cabeza"></select>      
+                <label for="" class="label-cabeza" id="label-telefono">Telefono:</label>
+                <input type="number" class="input-cabeza" id="input-telefono" maxlength="10">
+                <label for="" class="label-cabeza" id="label-domicilio">Domicilio:</label>
+                <input type="text" class="input-cabeza" id="input-domicilio">
+            </div>
+        </div>
+
+        <div class="container-datos"> 
+            <h4 class="titulo-lente">Cerca</h4>
+            
+            <div class="container-ojos">
+                <label for="" class="label-derecho">Ojo Derecho</label>
+                <label for="" class="label-izquierdo">Ojo Izquierdo</label>
+            </div>
+            
+            <div class="container-tablas">
+                <table>
+                    <thead>
+                        <tr class="tr-titulos-">
+                            <th class="th-esferico">Esferico</th>
+                            <th class="th-cilindrico">Cilindrico</th>
+                            <th class="th-eje">Eje</th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                        <tr>
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                        </tr>
+                   </tbody>
+                </table>
+    
+                <table>
+                    <thead>
+                        <tr class="tr-titulos-">
+                            <th>D.I.</th>
+                            <th>Altura</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+                <table>
+                    <thead>
+                        <tr class="tr-titulos-">
+                            <th class="th-mineral">Mineral</th>
+                            <th class="th-organico">Organico</th>
+                            <th class="th-tratamiento">Otros - Tratamiento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="input-checkbox" type="checkbox"></td>
+                            <td><input class="input-checkbox" type="checkbox"></td>
+                            <td>
+                                <select name="" class="combo-tratamiento">
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="input-checkbox" type="checkbox"></td>
+                            <td><input class="input-checkbox" type="checkbox"></td>
+                            <td>
+                                <select name="" class="combo-tratamiento">
+    
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="container-totales-tabla">
+                <div class="container-total container-total-derecho"><input class="input-total" type="number"></div>
+                <div class="container-total container-total-izquierdo"><input class="input-total" type="number" name="" id=""></div>
+                <div class="container-total container-total-armazon"><input class="input-total" type="number" name="" id=""></div>
+            </div>
+
+            <label for="" class="label-armazon">Armazon:</label>
+            <select name="" class="combo-armazon"></select>
+
+            <label for="" class="label-precio">Precio:</label>
+            <select name="" class="combo-precio"></select>
+        </div> 
+
+        <hr id="linea-cerca">
+
+        <div class="container-datos"> 
+            <h4 class="titulo-lente">Lejos</h4>
+
+            <div class="container-ojos">
+                <label for="" class="label-derecho">Ojo Derecho</label>
+                <label for="" class="label-izquierdo">Ojo Izquierdo</label>
+            </div>
+            
+            <div class="container-tablas">
+                <table>
+                    <thead>
+                        <tr class="tr-titulos-">
+                            <th class="th-esferico">Esferico</th>
+                            <th class="th-cilindrico">Cilindrico</th>
+                            <th class="th-eje">Eje</th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                        <tr class="tr-derecho">
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                        </tr>
+                        <tr class="tr-izquierdo">
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                        </tr>
+                   </tbody>
+                </table>
+    
+                <table>
+                    <thead>
+                        <tr class="tr-titulos-">
+                            <th>D.I.</th>
+                            <th>Altura</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr-derecho">
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                        </tr>
+                        <tr class="tr-izquierdo">
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+                <table>
+                    <thead>
+                        <tr class="tr-titulos-">
+                            <th class="th-mineral">Mineral</th>
+                            <th class="th-organico">Organico</th>
+                            <th class="th-tratamiento">Otros - Tratamiento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr-derecho">
+                            <td><input class="input-checkbox" type="checkbox"></td>
+                            <td><input class="input-checkbox" type="checkbox"></td>
+                            <td>
+                                <select name="" class="combo-tratamiento">
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="tr-izquierdo">
+                            <td><input class="input-checkbox" type="checkbox"></td>
+                            <td><input class="input-checkbox" type="checkbox"></td>
+                            <td>
+                                <select name="" class="combo-tratamiento">
+    
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="container-totales-tabla">
+                <div class="container-total container-total-derecho"><input class="input-total" type="number"></div>
+                <div class="container-total container-total-izquierdo"><input class="input-total" type="number" name="" id=""></div>
+                <div class="container-total container-total-armazon"><input class="input-total" type="number" name="" id=""></div>
+            </div>
+
+            <label for="" class="label-armazon">Armazon:</label>
+            <select name="" class="combo-armazon"></select>
+
+            <label for="" class="label-precio">Precio:</label>
+            <select name="" class="combo-precio"></select>
+        </div>
+
+        <hr id="linea-lejos">
+
+        <div id="container-polifocal">
+            <div id="container-checkbox">
+                <input type="radio" id="input-bifocal">
+                <label for="" id="label-bifocal">BIFOCAL</label>
+                <input type="radio" id="input-multifocal">
+                <label for="" id="label-multifocal">MULTIFOCAL</label>
+            </div>
+
+            <div class="container-ojos" id="ojos-polifocal">
+                <label for="" class="label-derecho">Ojo Derecho</label>
+                <label for="" class="label-izquierdo">Ojo Izquierdo</label>
+            </div>
+
+            <div class="container-tablas" id="container-tablas-polifocal">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>D.I.</th>
+                            <th>Altura</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="tr-derecho">
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                        </tr>
+                        <tr id="tr-izquierdo">
+                            <td><input type="number" class="input-tabla"></td>
+                            <td><input type="number" class="input-tabla"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table id="tabla-3">
+                    <thead>
+                        <tr>
+                            <th>Mineral</th>
+                            <th>Organico</th>
+                            <th>Otros - Tratamiento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="tr-derecho">
+                            <td><input class="input-checkbox" type="checkbox"></td>
+                            <td><input class="input-checkbox" type="checkbox"></td>
+                            <td>
+                                <select name="" class="combo-tratamiento">
+
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container-totales-tabla" id="container-totales-polifocal">
+                <div class="container-total"><input class="input-total" type="number"></div>
+            </div>
+        </div>
+
+        <hr id="linea-polifocal">
+        
+        <div id="container-total-ficha">
+            <div id="container-labeles">
+                <label for="" id="label-total">Total</label>
+                <label for="" id="label-seña">Seña</label>
+                <label for="" id="label-saldo">Saldo</label>
+            </div>
+            <div class="container-totales-tabla" id="container-totales">
+                <div id="container-total-final" class="container-totales-finales"></div>
+                <div id="container-total-seña" class="container-totales-finales"><input type="number" class="input-total"></div>
+                <div id="container-total-saldo" class="container-totales-finales"></div>
+            </div>
+            
+        </div>
+    </div>
+    <a role="button" id="boton-eliminar"><img id="imagen-eliminar" src="images/icons8-basura-48.png" alt="">Eliminar</a>
+    <a role="button" id="boton-grabar"><img id="imagen-grabar" src="images/icons8-guardar-50.png" alt="">Grabar</a>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
